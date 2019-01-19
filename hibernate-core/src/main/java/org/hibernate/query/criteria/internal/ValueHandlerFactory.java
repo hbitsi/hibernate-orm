@@ -195,7 +195,10 @@ public class ValueHandlerFactory {
 			if ( value == null ) {
 				return null;
 			}
-			if ( Number.class.isInstance( value ) ) {
+			if ( BigInteger.class.isInstance( value ) ) {
+				return (BigInteger) value;
+			}
+			else if ( Number.class.isInstance( value ) ) {
 				return BigInteger.valueOf( ( (Number) value ).longValue() );
 			}
 			else if ( String.class.isInstance( value ) ) {
@@ -216,7 +219,10 @@ public class ValueHandlerFactory {
 			if ( value == null ) {
 				return null;
 			}
-			if ( BigInteger.class.isInstance( value ) ) {
+			if ( BigDecimal.class.isInstance( value ) ) {
+				return (BigDecimal) value;
+			}
+			else if ( BigInteger.class.isInstance( value ) ) {
 				return new BigDecimal( (BigInteger) value );
 			}
 			else if ( Number.class.isInstance( value ) ) {

@@ -1,0 +1,4 @@
+<settings>
+  <localRepository>${env.M2_HOME}/repository</localRepository>
+</settings>
+
