@@ -1,3 +1,17 @@
+Nicehash Fix Fork
+=================
+
+To build and deploy to embedded m2home/repository, do the following from top-level dir
+
+    ./gradlew clean
+    
+    M2_HOME=`pwd`/m2home ./gradlew publishToMavenLocal
+
+See also the history of *nh-fixes* branch for ideas of what files to change when setting version etc...
+
+
+...
+
 <img src="http://static.jboss.org/hibernate/images/hibernate_logo_whitebkg_200px.png" />
 
 
